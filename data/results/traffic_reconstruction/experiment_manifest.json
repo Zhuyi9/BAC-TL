@@ -1,0 +1,68 @@
+{
+  "input_pcap": "<ORIGINAL_PROJECT_ROOT>/pcap/CTU-13-Dataset/12/botnet-capture-20110819-bot.pcap",
+  "original_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_20_flows.pcap",
+  "original_csv": "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_20_flows.csv",
+  "reconstructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_20_flows.pcap",
+  "original_flow_pcaps": [
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_001.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_002.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_003.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_004.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_005.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_006.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_007.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_008.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_009.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_010.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_011.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_012.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_013.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_014.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_015.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_016.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_017.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_018.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_019.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/original_flows/flow_020.pcap"
+  ],
+  "reconstructed_flow_pcaps": [
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_001.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_002.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_003.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_004.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_005.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_006.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_007.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_008.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_009.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_010.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_011.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_012.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_013.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_014.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_015.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_016.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_017.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_018.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_019.pcap",
+    "<ORIGINAL_PROJECT_ROOT>/comparison_results/traffic_reconstruction/reconstructed_flows/flow_020.pcap"
+  ],
+  "flow_count": 20,
+  "selection": "按包数量优先、持续时间次优先选择最长的完整 TCP/UDP 流",
+  "reconstruction": "逐包原始特征反序列化；未启用流量重塑、填充、分片、缩放或漂移",
+  "timestamp_jitter": {
+    "min_factor": 0.995,
+    "max_factor": 1.005,
+    "meaning": "逐包间隔乘性抖动；相对时间指标按每流首包归一化"
+  },
+  "packet_length_definition": "PCAP 链路层完整帧长度（字节）",
+  "allowed_differences": [
+    "绝对时间起点/PCAP 时间基准",
+    "由重构器重新计算的 IP/TCP/UDP 校验和",
+    "Ethernet 最小帧填充"
+  ],
+  "metrics": {
+    "frame_length_cosine": "逐包链路层帧长序列余弦",
+    "packet_curve_cosine": "相对到达时间-帧长二维序列余弦"
+  }
+}

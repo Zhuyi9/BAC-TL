@@ -1,0 +1,6 @@
+experiment,method,target,negative_source,train_count,train_positive_count,train_negative_count,test_count,test_positive_count,test_negative_count,accuracy,precision,recall,f1,TN,FP,FN,TP,augmentation_count
+dos_pseudo_future_cosine_stratified_v3,none,IDS-2017 DoS traffic,IDS-2017 Wednesday BENIGN-first non-DoS labels,9000,3000,6000,33580,16790,16790,0.9895175699821323,0.9926867282100468,0.9863013698630136,0.9894837476099426,16668,122,230,16560,0
+dos_pseudo_future_cosine_stratified_v3,smote,IDS-2017 DoS traffic,IDS-2017 Wednesday BENIGN-first non-DoS labels,12000,6000,6000,33580,16790,16790,0.9894877903513997,0.9801928133216476,0.9991661703394877,0.9895885562601386,16451,339,14,16776,3000
+dos_pseudo_future_cosine_stratified_v3,generated,IDS-2017 DoS traffic,IDS-2017 Wednesday BENIGN-first non-DoS labels,12000,6000,6000,33580,16790,16790,0.9794520547945206,0.9611066559743384,0.9993448481238832,0.9798528381219341,16111,679,11,16779,3000
+dos_pseudo_future_cosine_stratified_v3,generated_vs_none,IDS-2017 DoS traffic,IDS-2017 Wednesday BENIGN-first non-DoS labels,,,,,,,-1.02%,-3.18%,+1.32%,-0.97%,,,,,
+dos_pseudo_future_cosine_stratified_v3,generated_vs_smote,IDS-2017 DoS traffic,IDS-2017 Wednesday BENIGN-first non-DoS labels,,,,,,,-1.01%,-1.95%,+0.02%,-0.98%,,,,,

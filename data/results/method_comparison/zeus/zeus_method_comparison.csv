@@ -1,0 +1,6 @@
+experiment,method,target,negative_source,train_count,train_positive_count,train_negative_count,test_count,test_positive_count,test_negative_count,accuracy,precision,recall,f1,TN,FP,FN,TP,augmentation_count
+zeus_pseudo_future_cosine_stratified_v3,none,Zeus malware traffic,IDS-2017 Wednesday stratified labels,9000,3000,6000,176,88,88,0.9488636363636364,0.9247311827956989,0.9772727272727273,0.9502762430939227,81,7,2,86,0
+zeus_pseudo_future_cosine_stratified_v3,smote,Zeus malware traffic,IDS-2017 Wednesday stratified labels,12000,6000,6000,176,88,88,0.75,0.94,0.5340909090909091,0.6811594202898551,85,3,41,47,3000
+zeus_pseudo_future_cosine_stratified_v3,generated,Zeus malware traffic,IDS-2017 Wednesday stratified labels,12000,6000,6000,176,88,88,0.9602272727272727,0.9263157894736842,1.0,0.9617486338797814,81,7,0,88,3000
+zeus_pseudo_future_cosine_stratified_v3,generated_vs_none,Zeus malware traffic,IDS-2017 Wednesday stratified labels,,,,,,,+1.20%,+0.17%,+2.33%,+1.21%,,,,,
+zeus_pseudo_future_cosine_stratified_v3,generated_vs_smote,Zeus malware traffic,IDS-2017 Wednesday stratified labels,,,,,,,+28.03%,-1.46%,+87.23%,+41.19%,,,,,

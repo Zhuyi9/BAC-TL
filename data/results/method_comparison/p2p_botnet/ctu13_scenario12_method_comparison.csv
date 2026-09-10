@@ -1,0 +1,6 @@
+experiment,method,target,negative_source,train_count,train_positive_count,train_negative_count,test_count,test_positive_count,test_negative_count,accuracy,precision,recall,f1,TN,FP,FN,TP,augmentation_count
+ctu13_scenario12_botnet_vs_ids2017_all_labels,none,CTU-13 scenario 12 P2P Botnet,IDS-2017 Wednesday all labels,9000,3000,6000,786,393,393,0.8753180661577609,0.9226361031518625,0.8193384223918575,0.8679245283018868,366,27,71,322,0
+ctu13_scenario12_botnet_vs_ids2017_all_labels,smote,CTU-13 scenario 12 P2P Botnet,IDS-2017 Wednesday all labels,12000,6000,6000,786,393,393,0.9440203562340967,0.9330024813895782,0.9567430025445293,0.9447236180904522,366,27,17,376,3000
+ctu13_scenario12_botnet_vs_ids2017_all_labels,generated,CTU-13 scenario 12 P2P Botnet,IDS-2017 Wednesday all labels,12000,6000,6000,786,393,393,0.9643765903307888,0.9355608591885441,0.9974554707379135,0.9655172413793104,366,27,1,392,3000
+ctu13_scenario12_botnet_vs_ids2017_all_labels,generated_vs_none,CTU-13 scenario 12 P2P Botnet,IDS-2017 Wednesday all labels,,,,,,,+10.17%,+1.40%,+21.74%,+11.24%,,,,,
+ctu13_scenario12_botnet_vs_ids2017_all_labels,generated_vs_smote,CTU-13 scenario 12 P2P Botnet,IDS-2017 Wednesday all labels,,,,,,,+2.16%,+0.27%,+4.26%,+2.20%,,,,,

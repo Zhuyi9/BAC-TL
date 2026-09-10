@@ -1,0 +1,89 @@
+{
+  "label": "Zeus",
+  "horizons": 3,
+  "target_window_starts": [
+    1338292500.0,
+    1338292560.0,
+    1338292620.0
+  ],
+  "target_counts": [
+    30,
+    28,
+    30
+  ],
+  "generated_counts": [
+    15,
+    14,
+    15
+  ],
+  "real_counts": [
+    15,
+    14,
+    15
+  ],
+  "negative_count": 88,
+  "negative_mode": "stratified",
+  "negative_label_counts": {
+    "DoS": 78,
+    "BENIGN": 9,
+    "Unknown": 1
+  },
+  "test_count": 176,
+  "files": {
+    "generated_positive.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/generated_positive.csv",
+      "sha256": "7af3e6d2e10c509062bf51cbb3cf37cb4a96009004de2b2f29ffb06a412cad28",
+      "bytes": 215618
+    },
+    "real_positive.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/real_positive.csv",
+      "sha256": "cd578864b9a1d9b9f9acfbb5aa9bc0321733c520fb5f74cff22b80f19a882138",
+      "bytes": 210666
+    },
+    "pseudo_future_positive.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/pseudo_future_positive.csv",
+      "sha256": "6fcd5048b846071e59317fe0598733afd0eb9416f1bf3a7c0ddb1d071f563d0c",
+      "bytes": 431755
+    },
+    "ids_negative.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/ids_negative.csv",
+      "sha256": "ac7532fe85447278010dbb9279450dc170bf4bd30b85efc4cc16a2be6e27464c",
+      "bytes": 2741181
+    },
+    "pseudo_future_test.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/pseudo_future_test.csv",
+      "sha256": "19087633ec9d3e1b8a87c2362c57a1f968f057ddbe2b2ee03ea9b8379e302abe",
+      "bytes": 3196563
+    },
+    "future_window_01_generated.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/future_window_01_generated.csv",
+      "sha256": "22dac2d9507eb642ee38c6070a46b946302ce3e5136a6a06278fcb0159d360b1",
+      "bytes": 79065
+    },
+    "future_window_02_generated.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/future_window_02_generated.csv",
+      "sha256": "6007f65310d673192c89fcec32d08ae83669061d5a6d596e6f0daed2595d29cc",
+      "bytes": 50714
+    },
+    "future_window_03_generated.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/future_window_03_generated.csv",
+      "sha256": "cc1070b78aa491ce52dbbb1bf418dfc08d14dcd2caff4a2024ca379590a5d6ab",
+      "bytes": 79047
+    },
+    "direct_profile_summary.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/direct_profile_summary.csv",
+      "sha256": "a5a6ef547de4c2e5f44f040d440b1743943ac97d3eb75a15ec2e5119160425f2",
+      "bytes": 812
+    },
+    "predicted_centroid_vs_target_flow.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/predicted_centroid_vs_target_flow.csv",
+      "sha256": "6edbafdb3d0519216c880cfe5a5dde5e62df51fd3f7e39a179ccbf22fb12774e",
+      "bytes": 14906
+    },
+    "target_flow_packet_curve.csv": {
+      "path": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/attack_types/zeus/pseudo_future_cosine_stratified_v3/target_flow_packet_curve.csv",
+      "sha256": "473f557fa8b1eb33f69f6f514765e51db735b8f468b8c5f72c71d8fd81a244aa",
+      "bytes": 2327
+    }
+  }
+}

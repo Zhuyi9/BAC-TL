@@ -1,0 +1,14 @@
+attack,method,phase,status,command_count,time_s,cpu_usage_pct,memory_mb
+Botnet,generated,feature_extraction,success,6,246.0043807909824,106.26385886278594,2207.84375
+Botnet,generated,model_training,success,2,5.1884031249792315,224.24335040555604,589.609375
+Botnet,generated,traffic_generation,success,1,12.176114875008352,118.40247195425799,324.703125
+Botnet,generated,model_detection,success,1,0.7317469159606844,655.9593071462831,258.40625
+Botnet,generated,total,success,10,264.10064570693066,110.66431860387162,2207.84375
+Botnet,shared_pretrain,feature_extraction,success,1,203.66130224999506,105.80386583971439,2085.015625
+Botnet,shared_pretrain,model_training,success,1,3.752477500005625,225.73641014469246,618.5625
+Botnet,shared_pretrain,model_detection,success,1,0.7254481670097448,660.0377832280994,259.984375
+Botnet,shared_pretrain,total,success,3,208.13922791701043,109.89781853673624,2085.015625
+Botnet,smote,feature_extraction,success,1,205.90179412497673,105.72063440490169,2146.15625
+Botnet,smote,model_training,success,1,3.8210429589962587,202.66744140542866,587.453125
+Botnet,smote,model_detection,success,1,0.739665083005093,637.0016793083577,258.65625
+Botnet,smote,total,success,3,210.46250216697808,109.34792166322005,2146.15625

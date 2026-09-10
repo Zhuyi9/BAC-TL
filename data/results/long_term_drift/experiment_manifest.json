@@ -1,0 +1,29 @@
+{
+  "dataset_dir": "<ORIGINAL_PROJECT_ROOT>/comparison_datasets/ctu13_scenario12/concept_drift_many_windows_v2",
+  "rounds": 10,
+  "methods": {
+    "none": "one fixed pretraining model",
+    "smote": "one fixed finetuned model",
+    "generated": "per-round precomputed-centroid reconstruction and finetuning from the fixed pretraining model"
+  },
+  "settings": {
+    "macro_window": 60.0,
+    "slice_window": 1.0,
+    "nearest_metric": "cosine",
+    "intra_slice_mode": "even",
+    "negative_mode": "stratified",
+    "test_positive_source": "precomputed future windows",
+    "test_negative_count": 250,
+    "train_real_positive": 3000,
+    "train_negative": 6000,
+    "augmentation_count": 3000,
+    "pca_dim": 128,
+    "pretrain_epochs": 10,
+    "finetune_epochs": 10,
+    "decay_columns": {
+      "single_round_decay": "(current F1 - previous F1) / abs(previous F1) * 100%",
+      "cumulative_decay": "(current F1 - round-1 F1) / abs(round-1 F1) * 100%"
+    },
+    "change_sign": "negative means performance decrease; positive means performance increase"
+  }
+}

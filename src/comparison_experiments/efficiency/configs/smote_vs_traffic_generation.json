@@ -1,0 +1,144 @@
+{
+  "experiment_name": "smote_vs_traffic_generation_efficiency",
+  "description": "Compare feature extraction/dataset construction, classifier training, and detection using a pre-generated traffic PCAP. Traffic generation cost is excluded from this online-cost configuration.",
+  "repetitions": 5,
+  "warmup_repetitions": 1,
+  "sample_interval_seconds": 0.2,
+  "variables": {
+    "real_csv": "{project_root}/csv_output/wednesday/flows_100000_to_200000_from_chunks_labeled.csv",
+    "generated_pcap": "{project_root}/csv_output/wednesday/generated_from_label_DoS_full/generated_centroid_label_DoS_10502flows.pcap",
+    "positive_count": "10064",
+    "real_positive_count": "3000",
+    "epochs": "30",
+    "batch_size": "256",
+    "pca_dim": "128"
+  },
+  "environment": {
+    "PYTHONHASHSEED": "42",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "methods": [
+    {
+      "id": "smote",
+      "display_name": "SMOTE（当前随机线性插值实现）",
+      "phases": [
+        {
+          "id": "feature_extraction",
+          "display_name": "特征提取与增强数据构造",
+          "commands": [
+            [
+              "{python}",
+              "{project_root}/src/classification/prepare_behavior_augmented_dataset.py",
+              "--real_csv", "{real_csv}",
+              "--target_label", "DoS",
+              "--augmentation", "smote",
+              "--smote_target", "added_count",
+              "--smote_count", "{positive_count}",
+              "--max_real_train_positive", "{real_positive_count}",
+              "--positive_sample_strategy", "random",
+              "--output_dir", "{repeat_dir}/dataset",
+              "--window_seconds", "60",
+              "--negative_mode", "all_non_target",
+              "--min_packets", "2",
+              "--random_state", "42"
+            ]
+          ]
+        },
+        {
+          "id": "model_training",
+          "display_name": "模型训练",
+          "commands": [
+            [
+              "{python}",
+              "{project_root}/src/classification/train_binary_behavior_classifier.py",
+              "--dataset_dir", "{repeat_dir}/dataset",
+              "--output_dir", "{repeat_dir}/model",
+              "--epochs", "{epochs}",
+              "--batch_size", "{batch_size}",
+              "--pca_dim", "{pca_dim}",
+              "--patience", "6",
+              "--skip_test_evaluation"
+            ]
+          ]
+        },
+        {
+          "id": "model_detection",
+          "display_name": "模型检测",
+          "commands": [
+            [
+              "{python}",
+              "{project_root}/comparison_experiments/efficiency/detect_precomputed.py",
+              "--model_path", "{repeat_dir}/model/model.pt",
+              "--features", "{repeat_dir}/dataset/test_X.npy",
+              "--labels", "{repeat_dir}/dataset/test_y.npy",
+              "--metadata", "{repeat_dir}/dataset/test_metadata.csv",
+              "--output_dir", "{repeat_dir}/detection"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "traffic_generation",
+      "display_name": "迁移学习方法（时间漂移预测与流量重组生成）",
+      "phases": [
+        {
+          "id": "feature_extraction",
+          "display_name": "特征提取与增强数据构造",
+          "commands": [
+            [
+              "{python}",
+              "{project_root}/src/classification/prepare_behavior_augmented_dataset.py",
+              "--real_csv", "{real_csv}",
+              "--generated_input", "{generated_pcap}",
+              "--target_label", "DoS",
+              "--augmentation", "generated",
+              "--max_real_train_positive", "{real_positive_count}",
+              "--positive_sample_strategy", "random",
+              "--output_dir", "{repeat_dir}/dataset",
+              "--window_seconds", "60",
+              "--negative_mode", "all_non_target",
+              "--min_packets", "2",
+              "--random_state", "42"
+            ]
+          ]
+        },
+        {
+          "id": "model_training",
+          "display_name": "模型训练",
+          "commands": [
+            [
+              "{python}",
+              "{project_root}/src/classification/train_binary_behavior_classifier.py",
+              "--dataset_dir", "{repeat_dir}/dataset",
+              "--output_dir", "{repeat_dir}/model",
+              "--epochs", "{epochs}",
+              "--batch_size", "{batch_size}",
+              "--pca_dim", "{pca_dim}",
+              "--patience", "6",
+              "--skip_test_evaluation"
+            ]
+          ]
+        },
+        {
+          "id": "model_detection",
+          "display_name": "模型检测",
+          "commands": [
+            [
+              "{python}",
+              "{project_root}/comparison_experiments/efficiency/detect_precomputed.py",
+              "--model_path", "{repeat_dir}/model/model.pt",
+              "--features", "{repeat_dir}/dataset/test_X.npy",
+              "--labels", "{repeat_dir}/dataset/test_y.npy",
+              "--metadata", "{repeat_dir}/dataset/test_metadata.csv",
+              "--output_dir", "{repeat_dir}/detection"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

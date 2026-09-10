@@ -1,0 +1,332 @@
+{
+  "experiment": "基于变换特征的网络流量仿构实验",
+  "input_pcap": "<ORIGINAL_PROJECT_ROOT>/pcap/CTU-13-Dataset/12/botnet-capture-20110819-bot.pcap",
+  "pair_count": 20,
+  "protocol": "UDP",
+  "slice_window_seconds": 1.0,
+  "feature_definition": "目标流逐时间片数据包数与完整Ethernet帧长度总和",
+  "construction_definition": "目标行为特征驱动；种子流提供五元组、协议模板和真实载荷",
+  "resource_scope": "目标行为特征提取与PCAP仿构；不含输入PCAP拆流和种子流CSV转换",
+  "pairs": [
+    {
+      "pair_id": "pair_001",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_001_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_001_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_001_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('147.32.84.191', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('60.52.65.5', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_002",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_002_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_002_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_002_constructed.pcap",
+      "target_flow_key": [
+        "('110.159.22.70', 7600)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('147.32.84.192', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_003",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_003_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_003_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_003_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('147.32.84.192', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('222.35.126.161', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_004",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_004_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_004_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_004_constructed.pcap",
+      "target_flow_key": [
+        "('125.203.100.27', 18668)",
+        "('147.32.84.165', 32234)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('85.133.184.182', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_005",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_005_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_005_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_005_constructed.pcap",
+      "target_flow_key": [
+        "('124.91.38.8', 15287)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.192', 7600)",
+        "('80.174.182.154', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_006",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_006_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_006_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_006_constructed.pcap",
+      "target_flow_key": [
+        "('124.91.38.8', 15287)",
+        "('147.32.84.191', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('60.54.120.60', 1566)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_007",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_007_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_007_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_007_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('221.182.46.100', 10910)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('182.37.184.26', 1617)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_008",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_008_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_008_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_008_constructed.pcap",
+      "target_flow_key": [
+        "('118.101.240.24', 7600)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.165', 32234)",
+        "('202.215.223.141', 16571)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_009",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_009_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_009_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_009_constructed.pcap",
+      "target_flow_key": [
+        "('120.140.236.249', 7600)",
+        "('147.32.84.191', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.192', 7600)",
+        "('58.146.184.169', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_010",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_010_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_010_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_010_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('195.249.185.108', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('221.12.22.160', 20071)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_011",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_011_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_011_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_011_constructed.pcap",
+      "target_flow_key": [
+        "('123.124.139.240', 7600)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('218.28.77.140', 4955)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_012",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_012_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_012_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_012_constructed.pcap",
+      "target_flow_key": [
+        "('124.118.71.101', 1158)",
+        "('147.32.84.191', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('122.195.167.123', 39533)",
+        "('147.32.84.191', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_013",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_013_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_013_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_013_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('190.163.59.117', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('219.153.62.169', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_014",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_014_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_014_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_014_constructed.pcap",
+      "target_flow_key": [
+        "('123.118.99.115', 15589)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('221.202.225.87', 31716)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_015",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_015_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_015_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_015_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('221.12.22.160', 20071)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('122.140.51.217', 16224)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_016",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_016_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_016_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_016_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('61.178.17.180', 13878)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('122.195.167.123', 39533)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_017",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_017_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_017_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_017_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('60.54.55.117', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('116.115.150.149', 7600)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_018",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_018_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_018_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_018_constructed.pcap",
+      "target_flow_key": [
+        "('110.53.21.137', 25903)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.192', 7600)",
+        "('182.37.129.176', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_019",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_019_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_019_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_019_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('61.132.137.82', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('147.32.84.165', 7600)",
+        "('219.144.136.206', 7600)",
+        "17"
+      ]
+    },
+    {
+      "pair_id": "pair_020",
+      "target_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/target_flows/pair_020_target.pcap",
+      "seed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/seed_flows/pair_020_seed.pcap",
+      "constructed_pcap": "<ORIGINAL_PROJECT_ROOT>/comparison_results/transformed_feature_construction/constructed_flows/pair_020_constructed.pcap",
+      "target_flow_key": [
+        "('147.32.84.191', 7600)",
+        "('219.74.76.76', 7600)",
+        "17"
+      ],
+      "seed_flow_key": [
+        "('114.249.222.15', 53953)",
+        "('147.32.84.165', 7600)",
+        "17"
+      ]
+    }
+  ]
+}

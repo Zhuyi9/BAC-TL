@@ -1,0 +1,13 @@
+attack,method,phase,status,command_count,time_s,cpu_usage_pct,memory_mb
+DoS,generated,feature_extraction,success,1,407.04617475008126,105.49625512723584,2099.71875
+DoS,generated,model_training,success,1,4.228888000012375,199.2015867995404,832.234375
+DoS,generated,model_detection,success,1,0.954106374992989,598.1809942357778,621.484375
+DoS,generated,total,success,3,412.2291691250866,107.59786041860843,2099.71875
+DoS,shared_pretrain,feature_extraction,success,1,406.58657558402047,105.72916318806642,1872.625
+DoS,shared_pretrain,model_training,success,1,4.568502999958582,201.89037853501725,812.578125
+DoS,shared_pretrain,model_detection,success,1,0.9375672079622746,601.724649933256,622.234375
+DoS,shared_pretrain,total,success,3,412.0926457919413,107.9236743342769,1872.625
+DoS,smote,feature_extraction,success,1,401.55667700001504,105.54051028766335,2099.0
+DoS,smote,model_training,success,1,4.222649792092852,199.83712634188646,829.75
+DoS,smote,model_detection,success,1,0.9616611669771373,594.9910630150288,622.15625
+DoS,smote,total,success,3,406.74098795908503,107.67667851661311,2099.0

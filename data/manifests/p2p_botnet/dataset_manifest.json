@@ -1,0 +1,89 @@
+{
+  "label": "Botnet",
+  "horizons": 3,
+  "target_window_starts": [
+    1313746380.0,
+    1313746440.0,
+    1313746500.0
+  ],
+  "target_counts": [
+    153,
+    148,
+    92
+  ],
+  "generated_counts": [
+    77,
+    74,
+    46
+  ],
+  "real_counts": [
+    76,
+    74,
+    46
+  ],
+  "negative_count": 393,
+  "negative_mode": "stratified",
+  "negative_label_counts": {
+    "DoS": 352,
+    "BENIGN": 40,
+    "Unknown": 1
+  },
+  "test_count": 786,
+  "files": {
+    "generated_positive.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/generated_positive.csv",
+      "sha256": "a1d7c33155a0c4532237cd7a25cdd5ed926e5eb9348d007aa7896a9037827e91",
+      "bytes": 28325381
+    },
+    "real_positive.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/real_positive.csv",
+      "sha256": "96f7cb6ff6d68a425cc572f29ab2f31fee1bcae22bee4140d756d7694f2d2ea3",
+      "bytes": 5724366
+    },
+    "pseudo_future_positive.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/pseudo_future_positive.csv",
+      "sha256": "72e94ce9e8b3ebae6c7c34d35afb566d619eb8af5a3954376c2f50ece495bc56",
+      "bytes": 34314238
+    },
+    "ids_negative.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/ids_negative.csv",
+      "sha256": "e6949a2cc6ed2e330073f548b0172a7fc9b584c0cbc9afa342568fcba8a91841",
+      "bytes": 12629709
+    },
+    "pseudo_future_test.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/pseudo_future_test.csv",
+      "sha256": "c503c79d47bacf7614f574ab673bc820b072881d74c86079c76d813ec441df9b",
+      "bytes": 47079144
+    },
+    "future_window_01_generated.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/future_window_01_generated.csv",
+      "sha256": "b8f6e6d92742ff170bb58d16ed7df464cefce2ef0ef2c2562aafa372d52fe461",
+      "bytes": 7537221
+    },
+    "future_window_02_generated.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/future_window_02_generated.csv",
+      "sha256": "63954bec90bf8b26ecda47af1260f2c7e5e5347163e7886e7f2a455b85aea373",
+      "bytes": 16142558
+    },
+    "future_window_03_generated.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/future_window_03_generated.csv",
+      "sha256": "62a45d6731f70ff87da7edb9db1afaeb406633a2354e9aabb95cde689e4919ed",
+      "bytes": 4325894
+    },
+    "direct_profile_summary.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/direct_profile_summary.csv",
+      "sha256": "5b2a00cc21d3fc345fb4a67950d2ad37553c3a01f5895f37cbe98cfa71f46ba9",
+      "bytes": 659
+    },
+    "predicted_centroid_vs_target_flow.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/predicted_centroid_vs_target_flow.csv",
+      "sha256": "d2fbba5cd5826e2433786cbd7e824b8f9e2ad9990a08b9179dfb019022a11572",
+      "bytes": 16437
+    },
+    "target_flow_packet_curve.csv": {
+      "path": "comparison_datasets/ctu13_scenario12/pseudo_future_cosine_stratified_v3/target_flow_packet_curve.csv",
+      "sha256": "e2bc678ec1c0b47b0643b6a86df90f4314d4c8f4a29ad66444adb8e911e65878",
+      "bytes": 11559
+    }
+  }
+}

@@ -1,0 +1,6 @@
+experiment,method,target,negative_source,train_count,train_positive_count,train_negative_count,test_count,test_positive_count,test_negative_count,accuracy,precision,recall,f1,TN,FP,FN,TP,augmentation_count
+xss_pseudo_future_cosine_stratified_v3,none,XSS web attack traffic,IDS-2017 Wednesday stratified labels,1314,438,876,204,102,102,0.9754901960784313,0.9801980198019802,0.9705882352941176,0.9753694581280788,100,2,3,99,0
+xss_pseudo_future_cosine_stratified_v3,smote,XSS web attack traffic,IDS-2017 Wednesday stratified labels,1752,876,876,204,102,102,0.9754901960784313,0.9801980198019802,0.9705882352941176,0.9753694581280788,100,2,3,99,438
+xss_pseudo_future_cosine_stratified_v3,generated,XSS web attack traffic,IDS-2017 Wednesday stratified labels,1752,876,876,204,102,102,0.9705882352941176,0.9705882352941176,0.9705882352941176,0.9705882352941176,99,3,3,99,438
+xss_pseudo_future_cosine_stratified_v3,generated_vs_none,XSS web attack traffic,IDS-2017 Wednesday stratified labels,,,,,,,-0.50%,-0.98%,+0.00%,-0.49%,,,,,
+xss_pseudo_future_cosine_stratified_v3,generated_vs_smote,XSS web attack traffic,IDS-2017 Wednesday stratified labels,,,,,,,-0.50%,-0.98%,+0.00%,-0.49%,,,,,
